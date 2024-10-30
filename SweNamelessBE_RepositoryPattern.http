@@ -1,0 +1,6 @@
+@SweNamelessBE_RepositoryPattern_HostAddress = http://localhost:5240
+
+GET {{SweNamelessBE_RepositoryPattern_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
