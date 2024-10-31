@@ -48,6 +48,7 @@ namespace SweNamelessBE_RepositoryPattern.Repositories
                 Date = eventDTO.Date,
                 Artist = eventDTO.Artist,
                 VenueId = eventDTO.VenueId,
+                ImageUrl = eventDTO.ImageUrl,
                 TicketUrl = eventDTO.TicketUrl,
                 TicketPrice = eventDTO.TicketPrice,
             };
@@ -70,6 +71,7 @@ namespace SweNamelessBE_RepositoryPattern.Repositories
             eventToUpdate.VenueId = eventDTO.VenueId != 0 ? eventDTO.VenueId : eventToUpdate.VenueId;
             eventToUpdate.TicketUrl = eventDTO.TicketUrl ?? eventToUpdate.TicketUrl;
             eventToUpdate.TicketPrice = eventDTO.TicketPrice == 0 ? eventDTO.TicketPrice : eventToUpdate.TicketPrice;
+            eventToUpdate.ImageUrl = eventDTO.ImageUrl ?? eventToUpdate.ImageUrl;
 
             if (eventToUpdate.Date != null) // Assuming Date is a nullable DateTime
             {
