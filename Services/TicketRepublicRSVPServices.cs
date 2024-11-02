@@ -2,7 +2,7 @@
 using SweNamelessBE_RepositoryPattern.Models;
 using SweNamelessBE_RepositoryPattern.DTOs;
 
-namespace SweNamelessBE_RepositoryPattern.API.Services
+namespace SweNamelessBE_RepositoryPattern.Services
 {
     public class TicketRepublicRSVPService : ITicketRepublicRSVPService
     {

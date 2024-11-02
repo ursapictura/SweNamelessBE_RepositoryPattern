@@ -7,9 +7,9 @@ namespace SweNamelessBE_RepositoryPattern.Services
 {
     public class TicketRepublicVenueService : ITicketRepublicVenueService
     {
-        private readonly ITicketRepublicVenuesRepository _venueServicesRepo;
+        private readonly ITicketRepublicVenueRepository _venueServicesRepo;
 
-        public TicketRepublicVenueService(ITicketRepublicVenuesRepository venueServicesRepo)
+        public TicketRepublicVenueService(ITicketRepublicVenueRepository venueServicesRepo)
         {
             _venueServicesRepo = venueServicesRepo;
         }
