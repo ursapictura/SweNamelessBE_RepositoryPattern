@@ -7,13 +7,13 @@ namespace SweNamelessBE_RepositoryPattern.Endpoint
     {
         public static void MapRSVPEndpoints(this IEndpointRouteBuilder routes)
         {
-            var group = routes.MapGroup("").WithTags(nameof(RSVP));
+            var group = routes.MapGroup("/RSVP").WithTags(nameof(RSVP));
             group.MapGet("/{uid}", async (ITicketRepublicRSVPService rsvpService, string uid) =>
             {
                 var rsvp = await rsvpService.GetRSVPsAsync(uid);
                 return Results.Ok(rsvp);
             })
-                .WithName("GetRSVPById")
+                .WithName("GetRSVPByUid")
                 .WithOpenApi()
                 .Produces<List<RSVP>>(StatusCodes.Status200OK);
 
