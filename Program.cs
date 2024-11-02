@@ -1,6 +1,7 @@
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http.Json;
 using SweNamelessBE_RepositoryPattern.Data;
+using SweNamelessBE_RepositoryPattern.Endpoint;
 using SweNamelessBE_RepositoryPattern.Interfaces;
 using SweNamelessBE_RepositoryPattern.Repositories;
 using SweNamelessBE_RepositoryPattern.Services;
@@ -53,5 +54,5 @@ if (app.Environment.IsDevelopment())
 app.UseCors();
 app.UseHttpsRedirection();
 
-
+app.MapRSVPEndpoints();
 app.Run();
