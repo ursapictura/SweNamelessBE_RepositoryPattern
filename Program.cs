@@ -55,4 +55,6 @@ app.UseCors();
 app.UseHttpsRedirection();
 
 app.MapRSVPEndpoints();
+app.MapVenueEndpoints();
+
 app.Run();
