@@ -7,7 +7,7 @@ namespace SweNamelessBE_RepositoryPattern.Endpoint
     {
         public static void MapRSVPEndpoints(this IEndpointRouteBuilder routes)
         {
-            var group = routes.MapGroup("/RSVP").WithTags(nameof(RSVP));
+            var group = routes.MapGroup("/rsvps").WithTags(nameof(RSVP));
             group.MapGet("/{uid}", async (ITicketRepublicRSVPService rsvpService, string uid) =>
             {
                 var rsvp = await rsvpService.GetRSVPsAsync(uid);

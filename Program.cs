@@ -56,4 +56,6 @@ app.UseHttpsRedirection();
 
 app.MapEventEndpoints();
 app.MapRSVPEndpoints();
+app.MapVenueEndpoints();
+
 app.Run();
