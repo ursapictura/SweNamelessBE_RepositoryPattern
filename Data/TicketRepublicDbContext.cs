@@ -11,7 +11,7 @@ namespace SweNamelessBE_RepositoryPattern.Data
 
         public DbSet<Venue> Venues { get; set; }
 
-        public _TicketRepublicDbContext(DbContextOptions<TicketRepublicDbContext> context) : base(context)
+        public TicketRepublicDbContext(DbContextOptions<TicketRepublicDbContext> context) : base(context)
         {
 
         }
@@ -35,5 +35,4 @@ namespace SweNamelessBE_RepositoryPattern.Data
 
         }
     }
-}
 }

@@ -2,7 +2,7 @@
 
 namespace SweNamelessBE_RepositoryPattern.Interfaces
 {
-    public interface ITicketRepublicVenuesRepository
+    public interface ITicketRepublicVenueRepository
     {
         Task<List<Venue>> GetVenuesAsync();
         Task<List<Venue>> GetVenuesByUserAsync(string uid);

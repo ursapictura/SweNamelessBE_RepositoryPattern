@@ -7,7 +7,7 @@ using SweNamelessBE_RepositoryPattern.DTOs;
 
 namespace SweNamelessBE_RepositoryPattern.Repositories
 {
-    public class TicketRepublicVenueRepository : ITicketRepublicVenuesRepository
+    public class TicketRepublicVenueRepository : ITicketRepublicVenueRepository
     {
         private readonly TicketRepublicDbContext _context;
 
