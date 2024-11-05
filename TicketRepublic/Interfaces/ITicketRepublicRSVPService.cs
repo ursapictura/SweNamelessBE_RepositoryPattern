@@ -6,7 +6,8 @@ namespace SweNamelessBE_RepositoryPattern.Interfaces
     public interface ITicketRepublicRSVPService
     {
         Task<List<RSVP>> GetRSVPsAsync(string uid);
+        Task<RSVP> GetSingleRSVPAsync(string uid, int eventId);
         Task<RSVP> PostRSVPAsync(RSVP rsvp);
-        Task<RSVP> DeleteRSVPAsync(int id);
+        Task<RSVP> DeleteRSVPAsync(string uid, int eventId);
     }
 }

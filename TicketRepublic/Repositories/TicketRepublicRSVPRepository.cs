@@ -30,6 +30,19 @@ namespace SweNamelessBE_RepositoryPattern.Repositories
             return rsvp;
         }
 
+        public async Task<RSVP> GetSingleRSVPAsync(string uid, int eventId)
+        {
+            var rsvp = await _context.RSVPs.SingleOrDefaultAsync(rsvp => rsvp.Uid == uid && rsvp.EventId == eventId);
+
+
+            if (rsvp == null)
+            {
+                return null;
+            }
+
+            return rsvp;
+        }
+
         public async Task<RSVP> PostRSVPAsync(RSVP rsvp)
         {
             RSVP newRsvp = new()
@@ -44,9 +57,9 @@ namespace SweNamelessBE_RepositoryPattern.Repositories
             return newRsvp;
         }
 
-        public async Task<RSVP> DeleteRSVPAsync(int id)
+        public async Task<RSVP> DeleteRSVPAsync(string uid, int eventId)
         {
-            RSVP rsvp = await _context.RSVPs.SingleOrDefaultAsync(rsvp => rsvp.Id == id);
+            RSVP rsvp = await _context.RSVPs.SingleOrDefaultAsync(rsvp => rsvp.Uid == uid && rsvp.EventId == eventId);
 
             if (rsvp == null)
             {
