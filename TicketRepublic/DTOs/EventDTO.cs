@@ -8,6 +8,7 @@ namespace SweNamelessBE_RepositoryPattern.DTOs
         public string? Artist { get; set; }
         public int VenueId { get; set; }
 
+        public string? Uid { get; set; }
         public string? TicketUrl { get; set; }
 
         public decimal TicketPrice { get; set; }
