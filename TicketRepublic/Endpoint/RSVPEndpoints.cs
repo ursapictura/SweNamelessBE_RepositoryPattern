@@ -17,6 +17,20 @@ namespace SweNamelessBE_RepositoryPattern.Endpoint
                 .WithOpenApi()
                 .Produces<List<RSVP>>(StatusCodes.Status200OK);
 
+            group.MapGet("/{uid}/{eventId}", async (ITicketRepublicRSVPService rsvpService, string uid, int eventId) =>
+            {
+                var rsvp = await rsvpService.GetSingleRSVPAsync(uid, eventId);
+
+                if (rsvp ==  null)
+                {
+                    return Results.NotFound();
+                }
+                return Results.Ok(rsvp);
+            })
+                .WithName("GetSingleRSVP")
+                .WithOpenApi()
+                .Produces<RSVP>(StatusCodes.Status200OK);
+
             group.MapPost("/", async (ITicketRepublicRSVPService rsvpService, RSVP rsvp) =>
             {
                 var newRsvp = await rsvpService.PostRSVPAsync(rsvp);
@@ -28,9 +42,9 @@ namespace SweNamelessBE_RepositoryPattern.Endpoint
                 .Produces<RSVP>(StatusCodes.Status201Created)
                 .Produces(StatusCodes.Status400BadRequest);
 
-            group.MapDelete("/{id}", async (ITicketRepublicRSVPService rsvpService, int id) =>
+            group.MapDelete("/{uid}/{eventId}", async (ITicketRepublicRSVPService rsvpService, string uid, int eventId) =>
             {
-                var rsvp = await rsvpService.DeleteRSVPAsync(id);
+                var rsvp = await rsvpService.DeleteRSVPAsync(uid, eventId);
                 return Results.NoContent();
             })
                 .WithName("DeleteRSVP")

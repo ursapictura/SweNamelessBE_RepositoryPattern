@@ -17,13 +17,18 @@ namespace SweNamelessBE_RepositoryPattern.Services
             return await _ticketRepublicRSVPRepository.GetRSVPsAsync(uid);
         }
 
+        public async Task<RSVP> GetSingleRSVPAsync(string uid, int eventId)
+        {
+            return await _ticketRepublicRSVPRepository.GetSingleRSVPAsync(uid, eventId);
+        }
+
         public async Task<RSVP> PostRSVPAsync(RSVP rsvp)
         {
             return await _ticketRepublicRSVPRepository.PostRSVPAsync(rsvp);
         }
-        public async Task<RSVP> DeleteRSVPAsync(int id)
+        public async Task<RSVP> DeleteRSVPAsync(string uid, int eventId)
         {
-            return await _ticketRepublicRSVPRepository.DeleteRSVPAsync(id);
+            return await _ticketRepublicRSVPRepository.DeleteRSVPAsync(uid, eventId);
         }
     }
 }
