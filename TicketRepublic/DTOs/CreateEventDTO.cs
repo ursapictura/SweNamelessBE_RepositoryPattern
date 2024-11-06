@@ -10,6 +10,8 @@ namespace SweNamelessBE_RepositoryPattern.DTOs
         public string? ImageUrl { get; set; }
         public string? TicketUrl { get; set; }
 
+        public string? Uid { get; set; }
+
         public decimal TicketPrice { get; set; }
     }
 }

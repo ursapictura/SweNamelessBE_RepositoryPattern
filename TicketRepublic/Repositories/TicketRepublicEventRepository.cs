@@ -51,6 +51,7 @@ namespace SweNamelessBE_RepositoryPattern.Repositories
                 ImageUrl = eventDTO.ImageUrl,
                 TicketUrl = eventDTO.TicketUrl,
                 TicketPrice = eventDTO.TicketPrice,
+                Uid = eventDTO.Uid
             };
 
             _context.Events.Add(newEvent);
