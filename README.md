@@ -94,8 +94,9 @@ dotnet watch run
 | <kbd>PUT /venues/{id}</kbd>     | Update a venue
 | <kbd>DELETE /venues/{id}</kbd>     | Deletes a venue by id
 | <kbd>GET /rsvps/users/{uid}</kbd>     | Retrieves RSVPs by uid
+| <kbd>GET /rsvps/{uid}/{eventId}</kbd>     | Retrieves user RSVP for specific event
 | <kbd>POST /rsvps</kbd>     | Creates a new RSVP
-| <kbd>DELETE /rsvps/{id}</kbd>     | Deletes an rsvp by id
+| <kbd>DELETE /rsvps/{uid}/{eventId}</kbd>     | Deletes an rsvp by id
 
 
 <h2 id="colab">🤝 Collaborators</h2>
@@ -136,4 +137,4 @@ Here you will explain how other developers can contribute to your project. For e
 
 [📝 How to create a Pull Request](https://www.atlassian.com/br/git/tutorials/making-a-pull-request)
 
-[💾 API Postman Documentation]()
+[💾 API Postman Documentation](https://documenter.getpostman.com/view/31740100/2sAY4rDQJJ)
