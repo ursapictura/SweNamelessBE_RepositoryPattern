@@ -33,13 +33,6 @@ namespace SweNamelessBE_RepositoryPattern.Repositories
         public async Task<RSVP> GetSingleRSVPAsync(string uid, int eventId)
         {
             var rsvp = await _context.RSVPs.SingleOrDefaultAsync(rsvp => rsvp.Uid == uid && rsvp.EventId == eventId);
-
-
-            if (rsvp == null)
-            {
-                return null;
-            }
-
             return rsvp;
         }
 

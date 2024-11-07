@@ -23,9 +23,9 @@ namespace SweNamelessBE_RepositoryPattern.Endpoint
 
                 if (rsvp ==  null)
                 {
-                    return Results.NotFound();
+                    return Results.Ok(true);
                 }
-                return Results.Ok(rsvp);
+                return Results.Ok(false);
             })
                 .WithName("GetSingleRSVP")
                 .WithOpenApi()
